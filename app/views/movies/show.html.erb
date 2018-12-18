@@ -1,0 +1,18 @@
+<article>
+    <header>
+        <h2><%=@movie.title%></h2>
+    </header>
+        <p><%=@movie.description%></p>
+    <table>
+        <tr>
+        <th>Release Date:</th>
+        <td><%=@movie.released_on%> (<%=time_ago_in_words(@movie.released_on)%>)</td>
+        </tr>
+        <th>Rating:</th>
+        <td><%=@movie.rating%></td>
+        </tr>
+        <th>Total Gross:</th>
+        <td><%=format_total_gross(@movie)%></td>
+        </tr>
+    </table>
+</article>
